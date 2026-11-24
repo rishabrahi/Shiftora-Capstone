@@ -1,0 +1,8 @@
+{
+  "rows_before": 1800,
+  "rows_after": 1794,
+  "duplicates_removed": 0,
+  "rows_removed_by_rules": 6,
+  "missing_values_after_cleaning": 0,
+  "validation": "Passed: positive quantity, discount between 0 and 0.80, revenue recalculated"
+}

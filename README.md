@@ -1,41 +1,164 @@
-# Shiftora — E-commerce Sales Analytics & ML-Ready Data Workflow
+# ◈ SHIFTORA — Data Intelligence Platform
 
-## Project overview
-Shiftora is a reproducible data-engineering and analytics workflow built around a sample e-commerce transaction dataset. It demonstrates data acquisition, cleaning, validation, exploratory data analysis, visualisation, feature engineering, reusable preprocessing and experiment evaluation.
+<p align="center">
 
-> Dataset note: `data/raw_orders.csv` is a **synthetic sample dataset generated for this academic project**. It is not real customer or business data.
+**Raw data. Refined insights.**
 
-## Repository structure
-- `data/raw_orders.csv` — source sample transactions
-- `src/pipeline.py` — cleaning, validation, preprocessing and model training
-- `src/eda.py` — reusable exploratory charts
-- `outputs/clean_orders.csv` — cleaned ML-ready data (generated)
-- `outputs/data_quality.json` — data quality checks (generated)
-- `outputs/model_metrics.json` — held-out model metrics (generated)
-- `outputs/figures/` — exported visualisations
-- `models/revenue_pipeline.joblib` — fitted preprocessing + model pipeline (generated)
-- `app.py` — interactive Streamlit dashboard
-- `report/` — capstone report
+An end-to-end data intelligence platform that transforms raw e-commerce transaction data into meaningful business insights through data processing, exploratory analytics, feature engineering, and machine learning.
 
-## Run locally
-1. Install Python 3.10 or newer.
-2. Create and activate a virtual environment.
-3. Install dependencies: `pip install -r requirements.txt`
-4. Run the pipeline: `python src/pipeline.py`
-5. Generate EDA figures: `python src/eda.py`
-6. Launch dashboard: `streamlit run app.py`
+</p>
 
-## Workflow
-1. Acquire the sample CSV.
-2. Remove duplicate order IDs and invalid quantity/discount rows.
-3. Impute missing unit prices using category medians; label missing regions as `Unknown`.
-4. Recalculate revenue from price, quantity and discount.
-5. Derive month, day-of-week and quarter features.
-6. Explore trends by month, category and marketing channel.
-7. Build a reusable scikit-learn preprocessing + Random Forest pipeline.
-8. Evaluate on a held-out 20% test split using MAE, RMSE and R².
+<p align="center">
 
-## Limitations
-- Data is synthetic and does not represent an actual retailer.
-- Revenue is mathematically derived from price, quantity and discount; the model is a demonstration of an ML-ready pipeline, not a production forecasting system.
-- Model scores depend on the generated sample and should not be interpreted as real-world business performance.\n
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat&logo=scikitlearn&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=streamlit&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=flat&logo=plotly&logoColor=white)
+
+</p>
+
+---
+
+## Overview
+
+SHIFTORA is a data intelligence platform built to demonstrate how raw e-commerce transaction data can be transformed into structured, meaningful, and machine-learning-ready information.
+
+It combines data cleaning, exploratory data analysis, feature engineering, machine learning, and interactive business visualization in one workflow.
+
+## Dashboard Preview
+
+### Sales Overview
+
+![SHIFTORA Sales Dashboard](screenshots/dashboard-overview.png)
+
+### Transaction Analytics
+
+![SHIFTORA Transaction Analytics](screenshots/transaction-analytics.png)
+
+## Key Features
+
+- **Data Cleaning:** Handle missing values, duplicates, and data inconsistencies.
+- **Exploratory Data Analysis:** Discover patterns, trends, and relationships.
+- **Sales Analytics:** Explore revenue, orders, categories, and regions.
+- **Interactive Dashboard:** Explore insights through Streamlit.
+- **Feature Engineering:** Prepare features for machine learning.
+- **Machine Learning:** Demonstrate a Random Forest regression workflow.
+- **Data Pipeline:** Transform raw data into structured outputs.
+- **Experiment Analysis:** Present model evaluation metrics.
+
+## Tech Stack
+
+| Category | Technologies |
+|---|---|
+| Programming | Python |
+| Data Processing | Pandas, NumPy |
+| Visualization | Matplotlib, Plotly |
+| Machine Learning | Scikit-learn |
+| Dashboard | Streamlit |
+| Model Storage | Joblib |
+
+## Project Structure
+
+```text
+shiftora_capstone/
+├── app.py
+├── requirements.txt
+├── README.md
+├── data/
+│   └── raw/
+├── src/
+│   ├── pipeline.py
+│   └── eda.py
+├── outputs/
+│   ├── clean_orders.csv
+│   ├── figures/
+│   └── metrics/
+├── models/
+├── report/
+└── screenshots/
+    ├── dashboard-overview.png
+    └── transaction-analytics.png
+```
+
+*Illustrative structure; adjust it if your actual folders differ.*
+
+## Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/rishabrahi/shiftora-capstone.git
+cd shiftora-capstone
+```
+
+### 2. Install dependencies
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+### 3. Run the data pipeline
+
+```bash
+python src/pipeline.py
+```
+
+### 4. Run exploratory data analysis
+
+```bash
+python src/eda.py
+```
+
+### 5. Launch the dashboard
+
+```bash
+streamlit run app.py
+```
+
+## Dashboard Modules
+
+| Module | Description |
+|---|---|
+| Overview | Main dashboard |
+| Sales | Revenue and transaction analytics |
+| Products | Product performance |
+| Marketing | Marketing channel analytics |
+| Data Pipeline | Data processing and quality checks |
+| Experiments | Model experiment metrics |
+
+## Machine Learning
+
+SHIFTORA demonstrates a Random Forest regression workflow involving data preparation, feature engineering, model training, and evaluation.
+
+## Dataset Disclaimer
+
+The included dataset is synthetic and intended for educational and demonstration purposes. It does not represent real customer transactions or confidential business information.
+
+Model metrics and analytical findings are demonstration results, not real-world business performance.
+
+## Future Improvements
+
+- Integration with real-world datasets
+- Advanced predictive analytics
+- Automated data quality monitoring
+- Additional machine learning models
+- Cloud deployment and scalable pipelines
+
+## Author
+
+**Rishab Rahi**
+
+BCA — Artificial Intelligence & Data Science
+
+GitHub: [@rishabrahi](https://github.com/rishabrahi)
+
+---
+
+<p align="center">
+
+**SHIFTORA**
+
+*Raw data. Refined insights.*
+
+</p>
